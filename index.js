@@ -89,15 +89,26 @@ function CemberinAlani(yaricap) {
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-let ucetambolunenler,
-  enkucuk,
-  enbuyuk,
+let ucetambolunenler = [],
+  enkucuk=sayilar[0],
+  enbuyuk=sayilar[0],
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
 
 // 3a çözümü
+for (let index = 0; index < sayilar.length; index++) {
+  if (enbuyuk <= sayilar[index]){
+    enbuyuk = sayilar[index]
+  } 
+}
+for (let index = 0; index < sayilar.length; index++) {
+  if (enkucuk >= sayilar[index]){
+    enkucuk = sayilar[index]
+  } 
+}
+
 
 /* kodlar buraya */
 
@@ -133,8 +144,8 @@ module.exports = {
   CemberinCevresi,
   CemberinAlani,
   ucetambolunenler,
-  enbuyuk,
   enkucuk,
+  enbuyuk,
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
