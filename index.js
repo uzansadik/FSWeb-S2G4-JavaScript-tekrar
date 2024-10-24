@@ -95,7 +95,7 @@ let ucetambolunenler = [],
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
-  tekraredensayilar;
+  tekraredensayilar = [];
 
 // 3a çözümü
 for (let index = 0; index < sayilar.length; index++) {
@@ -109,28 +109,39 @@ for (let index = 0; index < sayilar.length; index++) {
   } 
 }
 
-
-/* kodlar buraya */
-
 // 3b çözümü:
 
-/* kodlar buraya */
+sayilar.forEach(element => {
+  if(element % 3 === 0){
+    ucetambolunenler.push(element);
+  } 
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
-
+ucebolunenlerintoplami = ucetambolunenler.reduce((prev,current) => prev+current,0);
 // 3d çözümü
 
-/* kodlar buraya */
-
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+const obj = {};
+sayilar.forEach((sayi)=>{
+
+  if(obj[sayi] === undefined){
+    obj[sayi] = 1;
+  }else{
+    obj[sayi] += 1;
+  }
+});
+
+for (const [key,value] of Object.entries(obj)) {
+tekraredensayilar.push(`${key} sayısı ${value} kere tekrar edilmiştir`);
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
